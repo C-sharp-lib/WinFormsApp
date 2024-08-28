@@ -1,0 +1,6 @@
+*.mdf
+*.ldf
+Dependencies
+.vs
+WinFormsApp1.sln
+
