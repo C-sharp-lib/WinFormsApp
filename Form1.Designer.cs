@@ -38,13 +38,19 @@
             tbDiscountPercent = new TextBox();
             tbDiscountAmount = new TextBox();
             tbTotal = new TextBox();
+            txtPremierCustomer = new Label();
+            rYesPremier = new RadioButton();
+            rNoPremier = new RadioButton();
+            panel1 = new Panel();
+            cbGift = new CheckBox();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnSubmit
             // 
             btnSubmit.BackColor = Color.FromArgb(0, 192, 0);
             btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(266, 338);
+            btnSubmit.Location = new Point(266, 480);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(178, 47);
             btnSubmit.TabIndex = 1;
@@ -56,7 +62,7 @@
             // 
             btnExit.BackColor = Color.FromArgb(192, 64, 0);
             btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(61, 338);
+            btnExit.Location = new Point(61, 480);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(182, 47);
             btnExit.TabIndex = 2;
@@ -131,13 +137,64 @@
             tbTotal.Size = new Size(178, 23);
             tbTotal.TabIndex = 10;
             // 
+            // txtPremierCustomer
+            // 
+            txtPremierCustomer.AutoSize = true;
+            txtPremierCustomer.Location = new Point(31, 24);
+            txtPremierCustomer.Name = "txtPremierCustomer";
+            txtPremierCustomer.Size = new Size(103, 15);
+            txtPremierCustomer.TabIndex = 11;
+            txtPremierCustomer.Text = "Premier Customer";
+            // 
+            // rYesPremier
+            // 
+            rYesPremier.AutoSize = true;
+            rYesPremier.Location = new Point(40, 42);
+            rYesPremier.Name = "rYesPremier";
+            rYesPremier.Size = new Size(42, 19);
+            rYesPremier.TabIndex = 12;
+            rYesPremier.Text = "Yes";
+            rYesPremier.UseVisualStyleBackColor = true;
+            // 
+            // rNoPremier
+            // 
+            rNoPremier.AutoSize = true;
+            rNoPremier.Location = new Point(40, 67);
+            rNoPremier.Name = "rNoPremier";
+            rNoPremier.Size = new Size(41, 19);
+            rNoPremier.TabIndex = 13;
+            rNoPremier.Text = "No";
+            rNoPremier.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(rNoPremier);
+            panel1.Controls.Add(rYesPremier);
+            panel1.Controls.Add(txtPremierCustomer);
+            panel1.Location = new Point(61, 317);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(167, 100);
+            panel1.TabIndex = 14;
+            // 
+            // cbGift
+            // 
+            cbGift.AutoSize = true;
+            cbGift.Location = new Point(290, 359);
+            cbGift.Name = "cbGift";
+            cbGift.Size = new Size(122, 19);
+            cbGift.TabIndex = 15;
+            cbGift.Text = "Is this order a gift?";
+            cbGift.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AcceptButton = btnSubmit;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnExit;
-            ClientSize = new Size(507, 450);
+            ClientSize = new Size(507, 539);
+            Controls.Add(cbGift);
+            Controls.Add(panel1);
             Controls.Add(tbTotal);
             Controls.Add(tbDiscountAmount);
             Controls.Add(tbDiscountPercent);
@@ -150,6 +207,8 @@
             Controls.Add(btnSubmit);
             Name = "Form1";
             Text = "Invoice Total Application";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,5 +225,10 @@
         private TextBox tbDiscountPercent;
         private TextBox tbDiscountAmount;
         private TextBox tbTotal;
+        private Label txtPremierCustomer;
+        private RadioButton rYesPremier;
+        private RadioButton rNoPremier;
+        private Panel panel1;
+        private CheckBox cbGift;
     }
 }

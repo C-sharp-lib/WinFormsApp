@@ -15,22 +15,29 @@ namespace WinFormsApp1
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             decimal subtotal = Convert.ToDecimal(tbSubtotal.Text);
-            var discountPercent = 0m;
-            if (subtotal > 50 || subtotal <= 100)
+            decimal discountPercent = 0m;
+            if (rYesPremier.Checked)
             {
-                discountPercent = .1m;
+                if (subtotal > 50 || subtotal <= 100)
+                {
+                    discountPercent = .1m;
+                }
+                else if (subtotal > 100 && subtotal <= 150)
+                {
+                    discountPercent = .15m;
+                }
+                else if (subtotal > 150)
+                {
+                    discountPercent = .20m;
+                }
             }
-            else if (subtotal > 100 && subtotal <= 150)
+            decimal discountAmount = subtotal * discountPercent;
+            decimal total = subtotal - discountAmount;
+            if (cbGift.Checked)
             {
-                discountPercent = .15m;
+                total += 5;
             }
-            else if (subtotal > 150)
-            {
-                discountPercent = .20m;
-            }
-            var discountAmount = subtotal * discountPercent;
-            var total = subtotal - discountAmount;
-            tbDiscountPercent.Text = discountPercent.ToString("P2");
+            tbDiscountPercent.Text = discountPercent.ToString("p2");
             tbDiscountAmount.Text = discountAmount.ToString("C");
             tbTotal.Text = total.ToString("C");
         }

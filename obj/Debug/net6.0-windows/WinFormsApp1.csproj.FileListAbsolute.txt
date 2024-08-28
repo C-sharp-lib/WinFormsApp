@@ -14,3 +14,4 @@ C:\Users\strad\OneDrive\Desktop\school\contemorary\practice\WinFormsApp1\WinForm
 C:\Users\strad\OneDrive\Desktop\school\contemorary\practice\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
 C:\Users\strad\OneDrive\Desktop\school\contemorary\practice\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\strad\OneDrive\Desktop\school\contemorary\practice\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+C:\Users\strad\OneDrive\Desktop\school\contemorary\practice\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.sourcelink.json
